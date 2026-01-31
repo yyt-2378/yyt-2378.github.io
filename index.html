@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yaotian Yang | AI for Science</title>
+  <meta name="description" content="PhD Student at Tsinghua University. Focusing on AI for Science, Microscopy, and Multimodal Chemistry." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* --- 核心配色与排版 --- */
+    :root {
+      --primary: #2563eb;       /* 科技蓝 */
+      --primary-hover: #1d4ed8;
+      --text-main: #111827;     /* 深灰黑 */
+      --text-muted: #6b7280;    /* 次级灰 */
+      --bg: #f9fafb;            /* 浅灰背景 */
+      --card-bg: #ffffff;
+      --border: #e5e7eb;
+      --radius: 12px;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--text-main);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a { color: var(--primary); text-decoration: none; transition: 0.2s; }
+    a:hover { color: var(--primary-hover); text-decoration: underline; }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    /* --- 头部 Hero --- */
+    header { margin-bottom: 60px; }
+    .name {
+      font-size: 2.25rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin: 0 0 10px 0;
+      color: #000;
+    }
+    .bio {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin: 0 0 24px 0;
+      max-width: 650px;
+    }
+    .links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;
+      border: 1px solid var(--border);
+      background: #fff;
+      border-radius: 99px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-main);
+    }
+    .btn:hover { border-color: var(--primary); color: var(--primary); text-decoration: none; }
+
+    /* --- 通用标题 --- */
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 50px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+    }
+
+    /* --- 经历 (Timeline) --- */
+    .timeline { position: relative; padding-left: 20px; margin-top: 24px; }
+    .timeline-item {
+      position: relative;
+      padding-left: 28px;
+      padding-bottom: 36px;
+      border-left: 2px solid #e5e7eb;
+    }
+    .timeline-item:last-child { border-left-color: transparent; }
+    .timeline-marker {
+      position: absolute;
+      left: -7px;
+      top: 5px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #fff;
+      border: 2px solid var(--primary);
+    }
+    .t-date { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; margin-bottom: 4px; }
+    .t-role { font-size: 1.1rem; font-weight: 700; color: #000; }
+    .t-org { font-size: 1rem; color: var(--text-main); margin-bottom: 8px; font-weight: 500; }
+    .t-desc { font-size: 0.95rem; color: #4b5563; margin: 0; padding-left: 18px; }
+    .t-desc li { margin-bottom: 6px; }
+
+    /* --- 论文与项目列表 --- */
+    .item-card {
+      margin-bottom: 24px;
+      padding: 16px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .item-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border-color: #dbeafe;
+    }
+    .item-title { font-size: 1.05rem; font-weight: 700; display: block; color: #111; margin-bottom: 4px; }
+    .item-meta { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 8px; }
+    .item-links { font-size: 0.85rem; font-weight: 600; }
+    .item-links a { margin-right: 12px; }
+
+    /* --- 页脚 --- */
+    footer { margin-top: 80px; font-size: 0.85rem; color: var(--text-muted); text-align: center; }
+
+    @media (max-width: 600px) {
+      .container { padding: 40px 20px; }
+      .name { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    
+    <header>
+      <h1 class="name">Yaotian Yang (杨耀天)</h1>
+      <p class="bio">
+        PhD Student @ Tsinghua University. <br>
+        Researching <b>AI for Science</b> with a focus on Microscopy-to-Structure Reconstruction, Multimodal Chemistry, and Agentic Systems.
+      </p>
+      <div class="links">
+        <a href="mailto:your_email@mails.tsinghua.edu.cn" class="btn">Email</a>
+        <a href="https://scholar.google.com/citations?user=P420h38AAAAJ&hl=zh-CN" class="btn">Google Scholar</a>
+        <a href="https://github.com/yyt-2378" class="btn">GitHub</a>
+        <a href="./cv.pdf" class="btn">CV (PDF)</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>Experience</h2>
+      <div class="timeline">
+        
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="t-date">Jun 2025 – Dec 2025</div>
+          <div class="t-role">Algorithm Intern (Multi-modal Representation)</div>
+          <div class="t-org">DP Technology (DeepModeling / 深势科技)</div>
+          <ul class="t-desc">
+            <li><b>Evaluation Pipeline:</b> Built comprehensive evaluation pipelines for multi-modal representation models to benchmark performance across chemical scenarios.</li>
+            <li><b>Dataset Construction:</b> Constructed high-quality multi-modal datasets and established data management platforms to support large-scale model training.</li>
+            <li><b>Algorithm Development:</b> Developed algorithms for novel scenarios and performed end-to-end model construction and training.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="t-date">Sep 2022 – Present (Expected 2028)</div>
+          <div class="t-role">PhD Student in Chemical Engineering</div>
+          <div class="t-org">Tsinghua University</div>
+          <ul class="t-desc">
+            <li>Advisor: [导师名字]. Specializing in iDPC-STEM imaging and atomic structure inversion using AI agents.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Selected Publications</h2>
+      
+      <div class="item-card">
+        <a href="https://arxiv.org/abs/2505.12650" class="item-title">AutoMat: Enabling Automated Crystal Structure Reconstruction from Microscopy via Agentic Tool Use</a>
+        <div class="item-meta"><b>Yaotian Yang</b>, et al. · arXiv 2025</div>
+        <div class="item-links">
+          <a href="https://arxiv.org/abs/2505.12650">PDF</a>
+          <a href="#">Code</a>
+          <a href="#">Project Page</a>
+        </div>
+      </div>
+
+      <div class="item-card">
+        <a href="#" class="item-title">ChemVLM: Exploring the Power of Multimodal Large Language Models in Chemistry</a>
+        <div class="item-meta">Selected Authors · AAAI 2025</div>
+        <div class="item-links">
+          <a href="#">PDF</a>
+          <a href="#">Code</a>
+        </div>
+      </div>
+
+      </section>
+
+    <section>
+      <h2>Projects & Open Source</h2>
+      <div class="item-card">
+        <span class="item-title">AutoMat Agent</span>
+        <p style="margin: 4px 0 0; color: #555; font-size: 0.95rem;">
+          An agentic pipeline that connects microscopy data to crystal structure analysis using LLM tool-use capabilities.
+        </p>
+      </div>
+      
+      <div class="item-card">
+        <span class="item-title">Microscopy Tools</span>
+        <p style="margin: 4px 0 0; color: #555; font-size: 0.95rem;">
+          Utility scripts for pre-processing iDPC-STEM images and handling CIF files.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Yaotian Yang.
+    </footer>
+
+  </div>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
